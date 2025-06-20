@@ -16,6 +16,9 @@ import Menubar from 'primevue/menubar'
 import Avatar from 'primevue/avatar'
 import PanelMenu from 'primevue/panelmenu'
 import TieredMenu from 'primevue/tieredmenu'
+import Dropdown from 'primevue/dropdown'
+
+import { Ripple } from 'primevue'
 
 // Create Vue app
 const app = createApp(App)
@@ -25,9 +28,10 @@ app.use(PrimeVue, {
     // theme: 'none'
     theme: {
         preset: Material
-    }
+    },
+    ripple: true 
 })
-
+app.directive('ripple', Ripple);  
 // Register PrimeVue components
 app.component('Button', Button)
 app.component('Card', Card)
@@ -37,6 +41,7 @@ app.component('Menubar', Menubar)
 app.component('Avatar', Avatar)
 app.component('PanelMenu', PanelMenu)
 app.component('TieredMenu', TieredMenu)
+app.component('Dropdown', Dropdown)
 
 // Mount app
 app.mount('#app')

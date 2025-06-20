@@ -23,7 +23,7 @@ emit('menu-select', items[0].key);
 </script>
 
 <template>
-  <div class="h-full bg-[#152735] border-r border-gray-200 w-[250px] text-white">
+  <div class="h-full bg-[#152735] w-[250px] text-white">
     <div class="flex justify-center">
       <TieredMenu
         :model="items"
